@@ -5,6 +5,6 @@ function myFunction() {
 }
 
 function My_First_Function() {
-    var str = "This is the button text!";
+    var str = "This is the button text!"; //Text that displays when the button is pushed
     document.getElementById("Button_Text").innerHTML = str;
 }
