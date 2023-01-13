@@ -1,0 +1,1 @@
+document.getElementById("myHeadHurts").innerHTML = document.write(typeof "Dog");
