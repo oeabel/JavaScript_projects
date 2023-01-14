@@ -23,12 +23,12 @@ function myFunction() {
 
     // var X = 9;.... X is an identifier, 9 is a literal (represents a value)      
 
-function Nested_Function(firstName, lastName) {
+function Nested_Function(firstName, lastName) {  //Nested function example
     function getFullName() {
         var firstName = "Omalley";
         var lastName = "Abel";
         return firstName + " " + lastName;
     }
-    document.getElementById("getFullName").innerHTML = "Hello " + getFullName();
+    document.getElementById("getFullName").innerHTML = "Hello " + getFullName(); 
 }
 
