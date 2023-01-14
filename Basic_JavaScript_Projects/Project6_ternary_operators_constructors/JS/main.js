@@ -29,6 +29,6 @@ function Nested_Function(firstName, lastName) {
         var lastName = "Abel";
         return firstName + " " + lastName;
     }
-    document.getElementById("getFullName").innerHTML = "Hello " + getFullName;
+    document.getElementById("getFullName").innerHTML = "Hello " + getFullName();
 }
 
