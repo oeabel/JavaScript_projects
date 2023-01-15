@@ -31,3 +31,21 @@ function watch_Movie() {  //runs if else condition
     }
     document.getElementById("Watch").innerHTML = watchmov;
 }
+
+function Time_function() {
+    var Time = new Date().getHours();
+    var Reply;
+    if (Time <12 == Time > 0) {
+        Reply = "It is morning time!";
+    } else if (Time >= 12 == Time < 18) {
+        Reply = "It is afternoon.";
+    } else {
+        Reply = "It is evening time.";
+    }
+    document.getElementById("Time_of_day").innerHTML = Reply;
+}
+
+X = 10  //Code with intentional error that was fixed using console.log
+Y = 11
+Z = X + Y
+console.log(Z);
