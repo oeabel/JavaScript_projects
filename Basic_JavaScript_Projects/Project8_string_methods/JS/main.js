@@ -37,3 +37,12 @@ function primValue() {  // valueOf returns the primitive value of a string
     let result = text.valueOf();
     document.getElementById("primitive").innerHTML = result;
 }
+
+function full_Sentence() {
+    var sen1 = "There is ";
+    var sen2 = "so much ";
+    var sen3 = "to learn right now ";
+    var sen4 = "that my head is swimming...";
+    var sentence = sen1.concat(sen2, sen3, sen4);
+    document.getElementById("Concatenate").innerHTML = sentence;
+}
