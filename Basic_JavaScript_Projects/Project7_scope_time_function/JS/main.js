@@ -45,7 +45,9 @@ function Time_function() {
     document.getElementById("Time_of_day").innerHTML = Reply;
 }
 
-X = 10  //Code with intentional error that was fixed using console.log
-Y = 11
-Z = X + Y
-console.log(Z);
+//Code with intentional error that was fixed using console.log
+function addNumbers () {
+    var A = 24; 
+    document.getElementById("localvar2").innerHTML = 40 - A;  
+}
+console.log(addNumbers);
