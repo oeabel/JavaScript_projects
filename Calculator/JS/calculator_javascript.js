@@ -26,7 +26,7 @@ function Input_Digit(digit) {
 }
 
 //This section handles decimal points
-function Input_Digit(dot) {
+function Input_Decimal(dot) {
     //This ensures that accidental clicking of the decimal point doesn't
     //cause bugs in the operation
     if (Calculator.Wait_Second_Operand === true) return;
@@ -102,7 +102,7 @@ keys.addEventListener('click', (event) => {
     if (target.classList.contains('operator')) {
         Handle_Operator(target.value);
         Update_Display();
-        return
+        return;
     }
     if (target.classList.contains('decimal')) {
         Input_Decimal(target.value);
