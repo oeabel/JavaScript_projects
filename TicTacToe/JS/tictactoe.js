@@ -67,7 +67,7 @@ function placeXOrO(squareNumber) {
 }
 
 //This function parses the selectedSquares array to search for win conditions.
-//drawline() funciton is called to draw a lineon the screen if the condition is met.
+//drawline() funciton is called to draw a line on the screen if the condition is met.
 function checkWinConditions() {
     // X 0, 1, 2 condition
     if (arrayIncludes('0X', '1X', '2X')) { drawWinLine(50, 100, 558, 100)}
@@ -82,7 +82,7 @@ function checkWinConditions() {
     // X 2, 5, 8 condition
     else if (arrayIncludes('2X', '5X', '8X')) { drawWinLine(508, 50, 508, 558)}
     // X 6, 4, 2 condition
-    else if (arrayIncludes('6X', '4X', '2X')) { drawWinLine(100, 508, 510, 90)}
+    else if (arrayIncludes('2X', '4X', '6X')) { drawWinLine(100, 508, 510, 90)}
     // X 0, 4, 8 condition
     else if (arrayIncludes('0X', '4X', '8X')) { drawWinLine(100, 100, 520, 520)}
     // O 0, 1, 2 condition
@@ -98,7 +98,7 @@ function checkWinConditions() {
     // O 2, 5, 8 condition
     else if (arrayIncludes('2O', '5O', '8O')) { drawWinLine(508, 50, 508, 558)}
     // O 6, 4, 2 condition
-    else if (arrayIncludes('6O', '4O', '2O')) { drawWinLine(100, 508, 510, 90)}
+    else if (arrayIncludes('2O', '4O', '6O')) { drawWinLine(100, 508, 510, 90)}
     // O 0, 4, 8 condition
     else if (arrayIncludes('0O', '4O', '8O')) { drawWinLine(100, 100, 520, 520)}
     //This condition checks for a tie. If none of the above conditions are met and
@@ -147,16 +147,16 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     const c = canvas.getContext('2d');
     //This line indicates where the start of a lines x asix is
     let x1 = coordX1,
-    //This line indicates where the start of a lines y axis is
-    y1 = coordY1,
-    //This line indicates where the end of a lines x axis is
-    x2 = coordX2,
-    //This line indicxates where the ends of a lines y axis is
-    y2 = coordY2,
-    //This variable stores temporary x axis data we update in our animation loop
-    x = x1,
-    //This variable stores temporary y axis data we update in our animation loop
-    y = y1;
+        //This line indicates where the start of a lines y axis is
+        y1 = coordY1,
+        //This line indicates where the end of a lines x axis is
+        x2 = coordX2,
+        //This line indicxates where the ends of a lines y axis is
+        y2 = coordY2,
+        //This variable stores temporary x axis data we update in our animation loop
+        x = x1,
+        //This variable stores temporary y axis data we update in our animation loop
+        y = y1;
 
     //This function interacts with canvas
     function animateLineDrawing() {
