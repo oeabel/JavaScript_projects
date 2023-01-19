@@ -11,7 +11,7 @@ function getReceipt () {
             text1 = text1+selectedSize+"<br>";
         }
     }
-    if (selectedSize === "Kiddie Pizza") {
+    if (selectedSize === "Kiddie Pizza") {  //User picks pizza size which tells program how much it costs
         sizeTotal = 4;
     } else if (selectedSize === "Personal Pizza") {
         sizeTotal = 6;
@@ -28,7 +28,7 @@ function getReceipt () {
     console.log(selectedSize+" = $"+sizeTotal+".00");
     console.log("size text1: "+text1);
     console.log("subtotal: $"+runningTotal+".00");
-    //these variables will get passed on to each funciton
+    //these variables will get passed on to each function
     getTopping(runningTotal, text1);
 };
 
@@ -49,7 +49,7 @@ function getTopping(runningTotal, text1) {
     } else {
         toppingTotal = 0;
     }
-    runningTotal = (runningTotal + toppingTotal);
+    runningTotal = (runningTotal + toppingTotal);  //adds total price (pizza + toppings)
     console.log("total selected topping items: "+toppingCount);
     console.log(toppingCount+" topping - 1 free topping = "+"$"+toppingTotal+".00");
     console.log("topping text1: "+text1);
